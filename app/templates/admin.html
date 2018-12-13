@@ -1,0 +1,75 @@
+{%extends 'base.html' %}
+{% block nav_left %}
+  {%if logged_in %}
+    <li><a href="/editor"> Create Blog</a></li>
+  {%endif%}
+{% endblock %}
+
+{% block nav_right %}
+    {%if logged_in %}
+      <li><a href="/admin"><span class="glyphicon glyphicon-user"></span> {{username}}</a></li>
+    {%endif%}
+
+    
+{% endblock %}
+{%block content%}
+{%if logged_in%}
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav">
+      <h4>{{ username }}</h4>
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#section1">Posts</a></li>
+        <li><a href="/logout">Logout</a></li>
+      </ul><br>
+    </div>
+
+    <div class="col-sm-9">
+      {% for post in blogs %}
+      <div id="blog{{post.blog_id}}">
+      <hr>
+      <!-- <h2>{{post.title}}</h2>
+      <h5><span class="glyphicon glyphicon-time"></span>{{post.date}}</h5>
+      <p id='blog{{post.blog_id}}' style="overflow:hidden;max-height: 100px;display: block;">{{post.content | safe }}</p>
+      <button class="btn btn-secondary"onClick="{if(this.textContent=='more'){document.getElementById('blog{{post.blog_id}}').style.maxHeight='none';this.textContent='less';}else{document.getElementById('blog{{post.blog_id}}').style.maxHeight='300px';this.textContent='more';}}" >more</button> -->
+      <h3><a href="/blog/{{post.blog_id}}">{{ post.title }}</a></h3>
+      <h4>{{ post.user_name }}</h4>
+      {% if post.published == 1 %}
+        {%else%}
+        <small><span class="glyphicon glyphicon-envelope"></span></small>
+        {%endif %}
+
+      <div id='blog1{{post.blog_id}}' style="display:block;max-height:300px; overflow: hidden;">{{ post.content | safe }}</div>
+  <!-- <button onClick="{if(this.textContent=='more'){document.getElementById('blog{{post.blog_id}}').style.maxHeight='none';this.textContent='less';}else{document.getElementById('blog{{post.blog_id}}').style.maxHeight='200px';this.textContent='more';}}" >more</button> -->
+  <script>
+    if(document.getElementById('blog1{{post.blog_id}}').offsetHeight>280)
+        document.write("<button onClick=\"{if(this.textContent=='more'){document.getElementById('blog1{{post.blog_id}}').style.maxHeight='none';this.textContent='less';}else{document.getElementById('blog1{{post.blog_id}}').style.maxHeight='300px';this.textContent='more';}}\" >more</button>");
+</script>
+
+  <button id='comment' onclick="{var div =document.getElementById('comment{{post.blog_id}}');if(div.style.display=='none'){div.style.display='block';get_comment('{{post.blog_id}}')}else{div.style.display='none'}}">comment</button>
+  <button id="delete{{post.blog_id}}" name="delete{{post.blog_id}}" onclick="del_blog('{{post.blog_id}}')" >Delete</button>
+  <button id="edit{{post.blog_id}}" name="edit{{post.blog_id}}" onclick="edit_blog('{{post.blog_id}}')" >Edit</button>
+  <div style="display:none;" id='comment{{post.blog_id}}'>
+  </div>
+      <br><br>
+    </div>
+    {% endfor %}
+      </div>
+  </div>
+</div>
+{%else%}
+<div class="container">
+<div class="row content">
+{% for post in blogs %}
+<hr>
+<h2>{{post.username}}</h2>
+<h5><span class="glyphicon glyphicon-time"></span>{{post.date}}</h5>
+<h5>{{post.username}}</h5>
+<div>{{post.content | safe }}</div>
+<br><br>
+
+{% endfor %}
+</div>
+</div>
+{%endif%}
+{% endblock %}

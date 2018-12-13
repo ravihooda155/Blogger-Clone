@@ -1,0 +1,130 @@
+
+{% block content %}
+	<head>
+		<title>{{posts[0].title}}</title>
+		<meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+		<link rel="stylesheet"
+		href="{{url_for('.static', filename='assets1/css/main.css')}}">
+
+		<link rel="stylesheet"
+		href="{{url_for('.static', filename='main.css')}}">
+
+	</head>
+	<a href="/home" accesskey="1" style="top:0px;right:0px;position: absolute;background-color: rgb(165, 119, 119)"title="" class="button special">Blogger</a>
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="#">{{posts[0].title }} </a></div>
+			</header>
+
+		<!-- Main -->
+			<section id="main">
+				<div class="inner">
+
+				<!-- One -->
+					<section id="one" class="wrapper style1">
+
+						<div class="image fit flush">
+							<img src="../static/images1/pic02.jpg" alt="" />
+						</div>
+						<header class="special">
+							<h2>{{posts[0].user_name}}</h2>
+							
+						</header>
+						<div class="content">
+                                {{posts[0].content | safe }}    
+                        </div>
+					</section>
+
+				<!-- Two -->
+					<section id="two" class="wrapper style2">
+						<header>
+							<h2>Comments</h2>
+                            <div>
+                                    <hr>
+                                    {% for com in comment %}
+                                    <label style="color:rgb(142, 167, 189);" >{{ com.user_name }} : <nobr style="color:aliceblue">{{ com.comment }}</nobr></label></br>
+                                    {%endfor%}
+                                    <hr/>
+                                    <form action="/add_comment_blog" class="form-inline" method = "post">
+                                        <textarea name="blog_id" value="'+blog_id + '" style="display:none" hidden>{{posts[0].blog_id}}</textarea>
+                                        <input type="text" class="form-control" name="plain_text" style="background-color: azure" placeholder="Enter your comment here" style="width:80%;margin-right:1em;"><br>
+                                        <button class="btn submit" style="width:120px" onclick="submit">Submit</button>
+                                    </form>
+                                
+                            </div>
+						</header>
+
+					<!--	<div class="content">
+							<div class="gallery">
+								<div>
+									<div class="image fit flush">
+										<a href="images/pic03.jpg"><img src="images/pic03.jpg" alt="" /></a>
+									</div>
+								</div>
+								<div>
+									<div class="image fit flush">
+										<a href="images/pic01.jpg"><img src="images/pic01.jpg" alt="" /></a>
+									</div>
+								</div>
+								<div>
+									<div class="image fit flush">
+										<a href="images/pic04.jpg"><img src="images/pic04.jpg" alt="" /></a>
+									</div>
+								</div>
+								<div>
+									<div class="image fit flush">
+										<a href="images/pic05.jpg"><img src="images/pic05.jpg" alt="" /></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section> -->
+
+				<!-- Three -->
+				<!--	<section id="three" class="wrapper">
+						<div class="spotlight">
+							<div class="image flush"><img src="images/pic06.jpg" alt="" /></div>
+							<div class="inner">
+								<h3>Viverra Hendrerit</h3>
+								<p>Curabitur eget semper ante. Morbi eleifend ultricies est, a blandit diam vehicula vel. Vestibulum porttitor nisi quis viverra hendrerit. Suspendisse vel volutpat nibh, vel elementum lacus. Maecenas commodo pulvinar dui, at cursus metus imperdiet vel.</p>
+							</div>
+						</div>
+						<div class="spotlight alt">
+							<div class="image flush"><img src="images/pic07.jpg" alt="" /></div>
+							<div  class="inner">
+								<h3>Curabitur Eget</h3>
+								<p>Curabitur eget semper ante. Morbi eleifend ultricies est, a blandit diam vehicula vel. Vestibulum porttitor nisi quis viverra hendrerit. Suspendisse vel volutpat nibh, vel elementum lacus. Maecenas commodo pulvinar dui, at cursus metus imperdiet vel.</p>
+							</div>
+						</div>
+						<div class="spotlight">
+							<div class="image flush"><img src="images/pic08.jpg" alt="" /></div>
+							<div class="inner">
+								<h3>Morbi Eleifend</h3>
+								<p>Curabitur eget semper ante. Morbi eleifend ultricies est, a blandit diam vehicula vel. Vestibulum porttitor nisi quis viverra hendrerit. Suspendisse vel volutpat nibh, vel elementum lacus. Maecenas commodo pulvinar dui, at cursus metus imperdiet vel.</p>
+							</div>
+						</div>
+					</section>
+
+				</div>
+			</section>-->
+
+		<!-- Footer 
+			<footer id="footer">
+				<div class="container">
+					<ul class="icons">
+						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+					</ul>
+				</div>
+				<div class="copyright">
+					&copy; Untitled. All rights reserved. Images <a href="https://unsplash.com">Unsplash</a> Design <a href="https://templated.co">TEMPLATED</a>
+				</div>
+			</footer>
+        -->
+	
+{% endblock %}
+

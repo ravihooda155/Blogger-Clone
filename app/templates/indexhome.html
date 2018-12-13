@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page Title</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ 	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<script>
+	var images = ["../static/images/1.jpg", "../static/images/2.jpg","../static/images/3.jpg","../static/images/4.jpg","../static/images/5.jpg","../static/images/6.jpg","../static/images/7.jpg","../static/images/8.jpg","../static/images/9.jpg"];
+		$(function () {
+		    var i = 0;
+		    console.log(images[i]);
+		    $("#dvImage").css("background-image",  "url("+images[i]+")");
+		    $("#dvImage").css("background-size",  "cover");
+		    setInterval(function () {
+		        i++;
+		        if (i == images.length) {
+		            i = 0;
+		            console.log(i);
+		        }
+
+		        $("#dvImage").css("background-image",  "url("+images[i]+")");
+		    $("#dvImage").css("background-size",  "cover");
+
+		    }, 3000);
+		});
+	</script>
+	<style>
+	
+		#but:hover {
+    		background-color: #DA70D6;
+
+    		color: black;
+}
+
+	</style>
+</head>
+<body id="dvImage">
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid" style="background-color: #71094d;">
+		  <div class="navbar-header">
+			<a class="navbar-brand" style="font-size: 30px;"href="#">Blogger</a>
+		  </div>
+		</div>
+	  </nav>
+	  <br><br>
+
+	  <center>
+	  <div  >
+		  <h1><kbd> Publish your passions,your way</kbd></h1><br>
+		  <h3><kbd>Create a unique and beautiful blog.</kbd></h3><br>
+		  <button onclick="window.location='http://127.0.0.1:5000/home';" class="btn btn-lg btn-primary" id="but"style="border-radius:8px; background-color:#71094d; border: 2px solid #FFFFFF;">View Blogs</button>
+	  </div>
+	</center>
+	
+</body>
+</html>
+

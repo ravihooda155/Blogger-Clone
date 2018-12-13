@@ -1,0 +1,104 @@
+{% extends "bootstrap/base.html" %}
+{% block styles %}
+{{super()}}
+<link rel="stylesheet"
+      href="{{url_for('.static', filename='main.css')}}">
+<link rel="stylesheet"
+      href="{{url_for('.static', filename='css/w3.css')}}">
+
+<link rel="stylesheet"
+      href="{{url_for('.static', filename='css/font-awesome.min.css')}}">
+
+{% endblock %}
+{% block scripts %}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="{{url_for('.static', filename='myscripts.js')}}"></script>
+{{super()}}
+{% endblock %}
+{%block content%}
+<div class="container">
+<div style="text-align:center">
+    <button onclick="change('bold')" ><i class="fa fa-bold" aria-hidden="true"></i></button>
+    <button onclick="change('italic')"><i class="fa fa-italic" aria-hidden="true"></i></button>
+    <button onclick="change('underline')"><i class="fa fa-underline" aria-hidden="true"></i></button>
+    <button onclick="change('strikethrough')"><i class="fa fa-strikethrough" aria-hidden="true"></i></button>
+    <button onclick="change('justifyLeft')"><i class="fa fa-align-left" aria-hidden="true"></i></button>
+    <button onclick="change('justifyCenter')"><i class="fa fa-align-center" aria-hidden="true"></i></button>
+    <button onclick="change('justifyRight')"><i class="fa fa-align-right" aria-hidden="true"></i></i></button>
+    <button onclick="change('justifyFull')"><i class="fa fa-align-justify" aria-hidden="true"></i></button>
+    <button onclick="change('indent')"><i class="fa fa-indent" aria-hidden="true"></i></button>
+    <button onclick="change('subscript')"><i class="fa fa-subscript" aria-hidden="true"></i></button>
+    <button onclick="change('superscript')"><i class="fa fa-superscript" aria-hidden="true"></i></button>
+    <button onclick="change('undo')"><i class="fa fa-undo" aria-hidden="true"></i></button>
+    <button onclick="change('redo')"><i class="fa fa-repeat" aria-hidden="true"></i></button>
+    <button onclick="change('insertUnorderedList')"><i class="fa fa-list-ul" aria-hidden="true"></i></button>
+    <button onclick="change('insertOrderedList')"><i class="fa fa-list-ol" aria-hidden="true"></i></button>
+    <button onclick="change('insertParagraph')"><i class="fa fa-paragraph" aria-hidden="true"></i></button>
+    <select onclick="changewitharg('formatBlock',this.value)">
+        <option>heading</option>
+        <option value="H1">H1 </option>
+        <option value="H2">H2 </option>
+        <option value="H3">H3 </option>
+        <option value="H4">H4 </option>
+        <option value="H5">H5 </option>
+        <option value="H6">H6 </option>
+    </select>
+    <br/>
+    <select onchange="changewitharg('fontName',this.value)">
+            <option value="Arial">Arial </option>
+            <option value="Helvetica">Helvetica </option>
+            <option value="Times New Roman">Times New Roman </option>
+            <option value="Times">Times </option>
+            <option value="Courier New">Courier New </option>
+            <option value="Verdana">Verdana </option>
+            <option value="Georgia">Georgia </option>
+    </select>
+    <select onchange="changewitharg('fontSize',this.value)">
+            <option value="1">1 </option>
+            <option value="2">2 </option>
+            <option value="3">3 </option>
+            <option value="4">4 </option>
+            <option value="5">5 </option>
+            <option value="6">6 </option>
+            <option value="7">7 </option>
+    </select>
+    <button onclick="change('insertHorizontalRule')">HR</button>
+    <button onclick="changewitharg('createLink',prompt('enter a url:','https://'))"><i class="fa fa-link" aria-hidden="true"></i></button>
+    <button onclick="change('unLink')"><i class="fa fa-chain-broken" aria-hidden="true"></i></button>
+    foreColor:<input type="color" onchange="changewitharg('foreColor',this.value)">
+    BackColor:<input type="color" onchange="changewitharg('hiliteColor',this.value)">
+    <button onclick="changewitharg('insertImage',prompt('enter image url:',''))"><i class="fa fa-picture-o" aria-hidden="true"></i></button>
+
+<div id="new_content"></div>
+</div>
+<div class="form-group">
+    <br>
+    <br>
+    <input type="text" class="form-control" id="title" name="title" placeholder="TItle of the blog" required/>
+    <br>
+  </div>
+    <iframe name='rich_test' class="form-control" id="ifr1" style="width:100%;height:40%;">jfdhj</iframe>
+    <br/>
+    <div class="form-group">
+        <select name="theme_choice" id="theme_choice" class="form-control">
+            <option value="theme1">Theme1</option>
+            <option value="theme2">Theme2</option>
+            <option value="theme3">Theme3</option>
+        </select>
+    </div>
+
+    <button onclick="show(1)" class="form-control">submit</button><br>
+    <button onclick="show(0)" class="form-control">save as draft</button>
+</div>
+<script>
+    window.onload = function() {
+        if("{{title}}"!="")
+        {           
+             window.frames[0].document.body.innerHTML='{{abc | safe}}';  
+             document.getElementById("title").value = "{{title}}";
+             document.getElementById("title").disabled = true;
+        }
+    };
+</script>
+{%endblock%}

@@ -1,0 +1,36 @@
+{% extends "base.html"%}
+{% block nav_right%}
+<form  class="navbar-form navbar-right form-inline" action="/login" method="post" style="margin-right:.005em;margin-left: .005em">
+    <div class="form-group"><input type="text" class="form-control" id="username" placeholder="username" name="username" style="height:2em; width: fit-content;color: black;background-color: white" required/></div>
+    <div class="form-group"><input type="password" class="form-control" id="password" placeholder="password" name="password" style="height:2em; width: fit-content;color: black;background-color: white" required/></div>
+    <div class="form-group"><input type="submit" class="button" value="Login" style="height:fit-content; width: fit-content; color: white;background-color:#b17a9e"></div>
+</form>
+{% endblock %}
+{%block content%}
+<header id="header" class="alt">
+    <div class="inner">
+      <h1>Blogger</h1>
+      <p>Blogging The Real World</p>
+    </div>
+  </header>
+  
+  {% for post in blogs %}
+  <div id="wrapper">
+      <section id="intro" class="main" style="background-color:rgb(248, 242, 153)">
+        <h2><a href="/blog/{{post.blog_id}}">{{ post.title }}</a></h2>
+        <h5><small>by : {{post.user_name}}</small></h5>
+        <small><span class="fa fa-clock-o"></span> {{post.date}}</small>
+        <div id='blog{{post.blog_id}}' style="display:block;max-height:300px; overflow: hidden;">{{ post.content | safe }}</div>
+        <br>
+        <script>
+          if(document.getElementById('blog{{post.blog_id}}').offsetHeight>280)
+              document.write("<button onClick=\"{if(this.textContent=='more'){document.getElementById('blog{{post.blog_id}}').style.maxHeight='none';this.textContent='less';}else{document.getElementById('blog{{post.blog_id}}').style.maxHeight='300px';this.textContent='more';}}\" >more</button>");
+        </script>
+        
+        <button id='comment' onclick="{var div =document.getElementById('comment{{post.blog_id}}');if(div.style.display=='none'){div.style.display='block';get_comment('{{post.blog_id}}')}else{div.style.display='none'}}">comment</button>
+        <div style="display:none;" id='comment{{post.blog_id}}'>
+        </div>
+            </section>
+  </div>
+  {%endfor%}
+    {%endblock%}

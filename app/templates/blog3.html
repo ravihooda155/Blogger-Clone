@@ -1,0 +1,72 @@
+
+{% block content %}
+<head>
+	<title>{{posts[0].title}}</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+	<link rel="stylesheet"
+	href="{{url_for('.static', filename='default.css')}}">
+	<link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Abel|Satisfy' rel='stylesheet' type='text/css' />
+
+<link rel="stylesheet"
+href="{{url_for('.static', filename='assets1/css/main.css')}}">
+<link rel="stylesheet"
+href="{{url_for('.static', filename='css1/w3.css')}}">
+
+<link rel="stylesheet"
+href="{{url_for('.static', filename='css1/font-awesome.min.css')}}">
+
+</head>
+
+<div id="header-wrapper">
+	<div id="header">
+		<div id="logo">
+			<h1><a href="#">{{posts[0].user_name}}</a></h1>
+		</div>
+		<div id="menu">
+			<ul>
+				<li class="current_page_item"><a href="/home" accesskey="1" title="">Blogger</a></li>
+				
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="wrapper">
+	<div id="page-wrapper">
+		<div id="page">
+			<div id="wide-content">
+				<div>
+					<h2>{{posts[0].title}}</h2>
+					<div class="content">
+						{{posts[0].content | safe }}    
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+				<section id="one" class="wrapper style2">
+					<div class="inner">
+						<div>
+							<div class="box">
+								<h2>Comments</h2>
+									<hr><hr>
+									{% for com in comment %}
+									<label style="color:rgb(38, 41, 44);" >{{ com.user_name }} : <nobr style="color:rgb(158, 181, 201)">{{ com.comment }}</nobr></label></br>
+									{%endfor%}
+									<hr/>
+									<form action="/add_comment_blog" class="form-inline" method = "post">
+										<textarea name="blog_id" value="'+blog_id + '" style="display:none" hidden>{{posts[0].blog_id}}</textarea>
+										<input type="text" class="form-control" name="plain_text" style="background-color: azure" placeholder="Enter your comment here" style="width:80%;margin-right:1em;"><br>
+										<button class="btn submit" style="width:120px" onclick="submit">Submit</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+		
+{% endblock %}

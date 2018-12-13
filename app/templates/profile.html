@@ -1,0 +1,24 @@
+{%extends 'base.html' %}
+
+{%block content%}
+<div class="container">
+    <div class="row" style="text-align:center">
+        <h3>{{profile[0].username}}</h3>
+    </div>
+{%for post in posts%}
+<h3><a href="/blog/{{post.blog_id}}"> {{ post.title }}</a></h3>
+<div id='blog{{post.blog_id}}' style="display:block;max-height:200px; overflow: hidden;">{{ post.content | safe }}</div>
+<button onClick="{if(this.textContent=='more'){document.getElementById('blog{{post.blog_id}}').style.maxHeight='none';this.textContent='less';}else{document.getElementById('blog{{post.blog_id}}').style.maxHeight='200px';this.textContent='more';}}" >more</button>
+<button id='comment' onclick="{var div =document.getElementById('comment{{post.blog_id}}');if(div.style.display=='none'){div.style.display='block';get_comment('{{post.blog_id}}')}else{div.style.display='none'}}">comment</button>
+<div style="display:none;" id='comment{{post.blog_id}}'>
+</div>
+<br><br>
+<hr>
+
+{%endfor%}
+</div>
+
+<footer style="text-align:center">
+    <a href="{{profile[0].facebook}}" target="_block"><span class="fa fa-facebook"></span></a>
+</footer>
+{%endblock%}

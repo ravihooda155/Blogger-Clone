@@ -1,0 +1,21 @@
+{%extends 'base.html' %}
+{% block content %}
+
+<div class="container">
+    <h1>{{posts[0].title }}</h1>
+    <h4><small>{{posts[0].user_name}}</small></h4>
+    <div style="color:#0b0808 !important">{{posts[0].content | safe }}</div>
+    <hr>
+    {% for com in comment %}
+    <label >{{ com.user_name }} : </label>{{ com.comment }}</br>
+    {%endfor%}
+    <!-- <hr/> -->
+    <form action="/add_comment_blog" class="form-inline" method = "post">
+        <textarea name="blog_id" value="'+blog_id + '" hidden>{{posts[0].blog_id}}</textarea>
+        <input type="text" class="form-control" name="plain_text" placeholder="Enter your comment here" style="width:80%;margin-right:1em;">
+        <button class="btn btn-default" onclick="submit">Submit</button>
+    </form>
+
+</div>
+
+{% endblock %}

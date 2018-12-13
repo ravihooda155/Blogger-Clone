@@ -1,0 +1,97 @@
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE users (
+    username text not null,
+    password text not null,
+    age text,
+    gender text ,
+    interest text 
+);
+INSERT INTO users VALUES('test','$5$rounds=535000$0QDxzfT6nsarfDV5$i6idiIe0birm4l1srn6m2G0vumrteInjVvx7X6onmD/','21','Male','Computers');
+INSERT INTO users VALUES('rekha','$5$rounds=535000$QCgKRbQC0OzsRs28$IzlLA1G5RSbA66U8ztASRsp2KH02bQthMhTZydCit4.','67','Female','Fiction');
+INSERT INTO users VALUES('test1','$5$rounds=535000$I56KjFX9yt3dHJyL$Lg06pl3xW93.JD4xhyiKw3fdUPuI6PBSnFT4Yh3MAF8','34','Female','Fiction');
+INSERT INTO users VALUES('test3','$5$rounds=535000$G3xkE4d0VS5gDqyS$1bkWCVHtps/IMCsW8hertmbc3wEVwOCMSW1zzDRiPHB','23','Male','swimming');
+INSERT INTO users VALUES('test4','$5$rounds=535000$dIjgPtJWn6LRU8wm$kGC16N9aAA08CSCcWjDkvXCisVTl4aX4ODwQX0OXo26','23','Male','swimming');
+INSERT INTO users VALUES('rajneesh','$5$rounds=535000$R8qGMD4e2Jansad4$G35ZuXgvkzxPO859rARmLtTxTfqtqaTzvg/1xu2RPQ9','21','Male','Computers');
+INSERT INTO users VALUES('rajat','$5$rounds=535000$fHQA2wpFys6ahVqm$kP84nVE9oetwZt6NrSynpqMDfXDbIBXK.a39Vlf0Me/','12','Male','Computers');
+CREATE TABLE user_details (
+username text PRIMARY KEY,
+password text NOT NULL,
+name text NOT NULL,
+DOB text NOT NULL,
+email text NOT NULL,
+gender text NOT NULL,
+isAdmin boolean NOT NULL, facebook text, mobile_no integer);
+INSERT INTO user_details VALUES('rajneesh','$5$rounds=535000$cxgKHqyWBN/O0bl1$i.0.DQYDpMbde95w7AdEyQtQlGQTefpJbU/GTD/Smf6','Rajneesh','2019-12-07','rajneesh@gmail.com','male',1,'https://www.facebook.com/singhatiya.rajneesh2',NULL);
+INSERT INTO user_details VALUES('raza','$5$rounds=535000$7i8eZk.S1IuKwsRO$y8si9xm.EOawOehySk67mMGzDm/rKOKi4XoxS5n2PPD','Raza','2019-12-07','raza@gmail.com','male',0,'https://www.instagram.com/raza_ali_official/',NULL);
+INSERT INTO user_details VALUES('rajat','$5$rounds=535000$WoFGaNDVQb7io6Hq$p5YJgbgftqxK8FjQzmwbmOxqapfdKB7dUGkH0IRHYQ1','rajat','2019-12-08','rajat@gmail.com','male',1,'    /* On small screens, set height to ''auto'' for sidenav and grid */',NULL);
+CREATE TABLE blog_detail (
+    blog_id integer PRIMARY KEY AUTOINCREMENT,
+    user_name text NOT NULL,
+    title text NOT NULL,
+    content text NOT NULL,
+    date text NOT NULL,
+    published BOOLEAN NOT NULL,
+    FOREIGN KEY (user_name) 
+    REFERENCES user_details (username));
+INSERT INTO blog_detail VALUES(57,'rajat','Hi','fas;gasdg;jdfgk','2018-11-11',1);
+INSERT INTO blog_detail VALUES(63,'rajneesh','Computer',replace(replace('<p>A <b>computer</b> is a device that can be instructed to carry out sequences of <a href="https://en.wikipedia.org/wiki/Arithmetic" title="Arithmetic">arithmetic</a> or <a href="https://en.wikipedia.org/wiki/Boolean_algebra" title="Boolean algebra">logical</a> operations automatically via <a href="https://en.wikipedia.org/wiki/Computer_programming" title="Computer programming">computer programming</a>. Modern computers have the ability to follow generalized sets of operations, called <i><a href="https://en.wikipedia.org/wiki/Computer_program" title="Computer program">programs</a>.</i> These programs enable computers to perform an extremely wide range of tasks.\r\n</p><p>Computers are used as <a href="https://en.wikipedia.org/wiki/Control_system" title="Control system">control systems</a> for a wide variety of <a href="https://en.wikipedia.org/wiki/Programmable_logic_controller" title="Programmable logic controller">industrial</a> and <a href="https://en.wikipedia.org/wiki/Consumer_electronics" title="Consumer electronics">consumer devices</a>. This includes simple special purpose devices like <a href="https://en.wikipedia.org/wiki/Microwave_oven" title="Microwave oven">microwave ovens</a> and <a href="https://en.wikipedia.org/wiki/Remote_control" title="Remote control">remote controls</a>, factory devices such as <a href="https://en.wikipedia.org/wiki/Industrial_robot" title="Industrial robot">industrial robots</a> and <a href="https://en.wikipedia.org/wiki/Computer-aided_design" title="Computer-aided design">computer-aided design</a>, and also general purpose devices like <a href="https://en.wikipedia.org/wiki/Personal_computer" title="Personal computer">personal computers</a> and <a href="https://en.wikipedia.org/wiki/Mobile_device" title="Mobile device">mobile devices</a> such as <a href="https://en.wikipedia.org/wiki/Smartphone" title="Smartphone">smartphones</a>.\r\n</p><p>Early computers were only conceived as calculating devices. Since ancient times, simple manual devices like the <a href="https://en.wikipedia.org/wiki/Abacus" title="Abacus">abacus</a> aided people in doing calculations. Early in the <a href="https://en.wikipedia.org/wiki/Industrial_Revolution" title="Industrial Revolution">Industrial Revolution</a>, some mechanical devices were built to automate long tedious tasks, such as guiding patterns for <a href="https://en.wikipedia.org/wiki/Loom" title="Loom">looms</a>. More sophisticated electrical <a href="https://en.wikipedia.org/wiki/Machine" title="Machine">machines</a> did specialized <a href="https://en.wikipedia.org/wiki/Analogue_electronics" title="Analogue electronics">analog</a> calculations in the early 20th century. The first <a href="https://en.wikipedia.org/wiki/Digital_data" title="Digital data">digital</a> electronic calculating machines were developed during <a href="https://en.wikipedia.org/wiki/World_War_II" title="World War II">World War II</a>.  The speed, power, and versatility of computers have been increasing dramatically ever since then.\r\n</p><p>Conventionally, a modern computer consists of at least one <a href="https://en.wikipedia.org/wiki/Processing_element" class="mw-redirect" title="Processing element">processing element</a>, typically a <a href="https://en.wikipedia.org/wiki/Central_processing_unit" title="Central processing unit">central processing unit</a> (CPU), and some form of <a href="https://en.wikipedia.org/wiki/Memory_(computers)" class="mw-redirect" title="Memory (computers)">memory</a>.\r\n The processing element carries out arithmetic and logical operations, \r\nand a sequencing and control unit can change the order of operations in \r\nresponse to stored <a href="https://en.wikipedia.org/wiki/Data" title="Data">information</a>. <a href="https://en.wikipedia.org/wiki/Peripheral" title="Peripheral">Peripheral</a>\r\n devices include input devices (keyboards, mice, joystick, etc.), output\r\n devices (monitor screens, printers, etc.), and input/output devices \r\nthat perform both functions (e.g., the 2000s-era <a href="https://en.wikipedia.org/wiki/Touchscreen" title="Touchscreen">touchscreen</a>).\r\n Peripheral devices allow information to be retrieved from an external \r\nsource and they enable the result of operations to be saved and \r\nretrieved.\r\n</p>','\r',char(13)),'\n',char(10)),'2018-11-11',1);
+INSERT INTO blog_detail VALUES(64,'rajneesh','more test',replace(replace('<p>According to the <i>Oxford English Dictionary</i>, the first known use of the word "computer" was in 1613 in a book called <i>The Yong Mans Gleanings</i>\r\n by English writer Richard Braithwait: "I haue [sic] read the truest \r\ncomputer of Times, and the best Arithmetician that euer [sic] breathed, \r\nand he reduceth thy dayes into a short number." This usage of the term \r\nreferred to a <a href="https://en.wikipedia.org/wiki/Human_computer" title="Human computer">human computer</a>,\r\n a person who carried out calculations or computations. The word \r\ncontinued with the same meaning until the middle of the 20th century. \r\nOriginally, women were often hired as "human computers" because they \r\ncould be paid less than their male counterparts.<sup id="cite_ref-FOOTNOTEEvans201823_1-0" class="reference"><a href="https://en.wikipedia.org/wiki/Computer#cite_note-FOOTNOTEEvans201823-1">[1]</a></sup> By 1943, most human computers were women.<sup id="cite_ref-FOOTNOTESmith20136_2-0" class="reference"><a href="https://en.wikipedia.org/wiki/Computer#cite_note-FOOTNOTESmith20136-2">[2]</a></sup> From the end of the 19th century the word began to take on its more familiar meaning, a machine that carries out computations.<sup id="cite_ref-OEDComputer_3-0" class="reference"><a href="https://en.wikipedia.org/wiki/Computer#cite_note-OEDComputer-3">[3]</a></sup> \r\n</p><p>The <i>Online Etymology Dictionary</i> gives the first attested \r\nuse of "computer" in the "1640s, [meaning] "one who calculates,"; this \r\nis an "...&nbsp;agent noun from compute (v.)". The <i>Online Etymology Dictionary</i> states that the use of the term to mean "calculating machine" (of any type) is from 1897."  The <i>Online Etymology Dictionary</i>\r\n indicates that the "modern use" of the term, to mean "programmable \r\ndigital electronic computer" dates from "...&nbsp;1945 under this name; [in \r\na] theoretical [sense] from 1937, as <a href="https://en.wikipedia.org/wiki/Turing_machine" title="Turing machine">Turing machine</a>".<sup id="cite_ref-4" class="reference"><a href="https://en.wikipedia.org/wiki/Computer#cite_note-4">[4]</a></sup>\r\n</p>','\r',char(13)),'\n',char(10)),'2018-11-11',1);
+INSERT INTO blog_detail VALUES(65,'rajneesh','more 1',replace(replace('<p>According to the <i>Oxford English Dictionary</i>, the first known use of the word "computer" was in 1613 in a book called <i>The Yong Mans Gleanings</i>\r\n by English writer Richard Braithwait: "I haue [sic] read the truest \r\ncomputer of Times, and the best Arithmetician that euer [sic] breathed, \r\nand he reduceth thy dayes into a short number." This usage of the term \r\nreferred to a <a href="https://en.wikipedia.org/wiki/Human_computer" title="Human computer">human computer</a>,\r\n a person who carried out calculations or computations. The word \r\ncontinued with the same meaning until the middle of the 20th century. \r\nOriginally, women were often hired as "human computers" because they \r\ncould be paid less than their male counterparts.<sup id="cite_ref-FOOTNOTEEvans201823_1-0" class="reference"><a href="https://en.wikipedia.org/wiki/Computer#cite_note-FOOTNOTEEvans201823-1">[1]</a></sup> By 1943, most human computers were women.<sup id="cite_ref-FOOTNOTESmith20136_2-0" class="reference"><a href="https://en.wikipedia.org/wiki/Computer#cite_note-FOOTNOTESmith20136-2">[2]</a></sup> From the end of the 19th century the word began to take on its more familiar meaning, a machine that carries out computations.<sup id="cite_ref-OEDComputer_3-0" class="reference"><a href="https://en.wikipedia.org/wiki/Computer#cite_note-OEDComputer-3">[3]</a><br></sup></p><p>A <b>computer</b> is a device that can be instructed to carry out sequences of <a href="https://en.wikipedia.org/wiki/Arithmetic" title="Arithmetic">arithmetic</a> or <a href="https://en.wikipedia.org/wiki/Boolean_algebra" title="Boolean algebra">logical</a> operations automatically via <a href="https://en.wikipedia.org/wiki/Computer_programming" title="Computer programming">computer programming</a>. Modern computers have the ability to follow generalized sets of operations, called <i><a href="https://en.wikipedia.org/wiki/Computer_program" title="Computer program">programs</a>.</i> These programs enable computers to perform an extremely wide range of tasks.\r\n</p><p>Computers are used as <a href="https://en.wikipedia.org/wiki/Control_system" title="Control system">control systems</a> for a wide variety of <a href="https://en.wikipedia.org/wiki/Programmable_logic_controller" title="Programmable logic controller">industrial</a> and <a href="https://en.wikipedia.org/wiki/Consumer_electronics" title="Consumer electronics">consumer devices</a>. This includes simple special purpose devices like <a href="https://en.wikipedia.org/wiki/Microwave_oven" title="Microwave oven">microwave ovens</a> and <a href="https://en.wikipedia.org/wiki/Remote_control" title="Remote control">remote controls</a>, factory devices such as <a href="https://en.wikipedia.org/wiki/Industrial_robot" title="Industrial robot">industrial robots</a> and <a href="https://en.wikipedia.org/wiki/Computer-aided_design" title="Computer-aided design">computer-aided design</a>, and also general purpose devices like <a href="https://en.wikipedia.org/wiki/Personal_computer" title="Personal computer">personal computers</a> and <a href="https://en.wikipedia.org/wiki/Mobile_device" title="Mobile device">mobile devices</a> such as <a href="https://en.wikipedia.org/wiki/Smartphone" title="Smartphone">smartphones</a>.\r\n</p><p>Early computers were only conceived as calculating devices. Since ancient times, simple manual devices like the <a href="https://en.wikipedia.org/wiki/Abacus" title="Abacus">abacus</a> aided people in doing calculations. Early in the <a href="https://en.wikipedia.org/wiki/Industrial_Revolution" title="Industrial Revolution">Industrial Revolution</a>, some mechanical devices were built to automate long tedious tasks, such as guiding patterns for <a href="https://en.wikipedia.org/wiki/Loom" title="Loom">looms</a>. More sophisticated electrical <a href="https://en.wikipedia.org/wiki/Machine" title="Machine">machines</a> did specialized <a href="https://en.wikipedia.org/wiki/Analogue_electronics" title="Analogue electronics">analog</a> calculations in the early 20th century. The first <a href="https://en.wikipedia.org/wiki/Digital_data" title="Digital data">digital</a> electronic calculating machines were developed during <a href="https://en.wikipedia.org/wiki/World_War_II" title="World War II">World War II</a>.  The speed, power, and versatility of computers have been increasing dramatically ever since then.\r\n</p><p>Conventionally, a modern computer consists of at least one <a href="https://en.wikipedia.org/wiki/Processing_element" class="mw-redirect" title="Processing element">processing element</a>, typically a <a href="https://en.wikipedia.org/wiki/Central_processing_unit" title="Central processing unit">central processing unit</a> (CPU), and some form of <a href="https://en.wikipedia.org/wiki/Memory_(computers)" class="mw-redirect" title="Memory (computers)">memory</a>.\r\n The processing element carries out arithmetic and logical operations, \r\nand a sequencing and control unit can change the order of operations in \r\nresponse to stored <a href="https://en.wikipedia.org/wiki/Data" title="Data">information</a>. <a href="https://en.wikipedia.org/wiki/Peripheral" title="Peripheral">Peripheral</a>\r\n devices include input devices (keyboards, mice, joystick, etc.), output\r\n devices (monitor screens, printers, etc.), and input/output devices \r\nthat perform both functions (e.g., the 2000s-era <a href="https://en.wikipedia.org/wiki/Touchscreen" title="Touchscreen">touchscreen</a>).\r\n Peripheral devices allow information to be retrieved from an external \r\nsource and they enable the result of operations to be saved and \r\nretrieved.\r\n</p><p><br><sup id="cite_ref-OEDComputer_3-0" class="reference"></sup> \r\n</p><p>The <i>Online Etymology Dictionary</i> gives the first attested \r\nuse of "computer" in the "1640s, [meaning] "one who calculates,"; this \r\nis an "...&nbsp;agent noun from compute (v.)". The <i>Online Etymology Dictionary</i> states that the use of the term to mean "calculating machine" (of any type) is from 1897."  The <i>Online Etymology Dictionary</i>\r\n indicates that the "modern use" of the term, to mean "programmable \r\ndigital electronic computer" dates from "...&nbsp;1945 under this name; [in \r\na] theoretical [sense] from 1937, as <a href="https://en.wikipedia.org/wiki/Turing_machine" title="Turing machine">Turing machine</a>".<sup id="cite_ref-4" class="reference"><a href="https://en.wikipedia.org/wiki/Computer#cite_note-4">[4]</a></sup>\r\n</p>','\r',char(13)),'\n',char(10)),'2018-11-11',1);
+CREATE TABLE comment (
+    comment_id integer PRIMARY KEY AUTOINCREMENT,
+    comment text NOT NULL,
+    blog_id integer NOT NULL, user_name text,
+    FOREIGN KEY (blog_id)
+    REFERENCES blog_detail (blog_id));
+INSERT INTO comment VALUES(1,'Hello friend!',3,NULL);
+INSERT INTO comment VALUES(2,'Hello friend!How are you . this is blog 1',1,NULL);
+INSERT INTO comment VALUES(3,'Hello friend!How are you . this is blog 2',2,NULL);
+INSERT INTO comment VALUES(4,'Hello friend!How are you . this is blog 3',3,NULL);
+INSERT INTO comment VALUES(5,'This is a sample comment',12,NULL);
+INSERT INTO comment VALUES(6,'Helo friend ! Chai Peelo',12,'rajneesh');
+INSERT INTO comment VALUES(7,'Test : Comment submitted or not.',12,'rajneesh');
+INSERT INTO comment VALUES(8,'Test : Comment submitted or not.',12,'rajneesh');
+INSERT INTO comment VALUES(9,'Test : Comment submitted or not.',12,'rajneesh');
+INSERT INTO comment VALUES(10,'Test : Comment submitted or not.',12,'rajneesh');
+INSERT INTO comment VALUES(11,'Hello friend!',12,'rajneesh');
+INSERT INTO comment VALUES(12,'CraZy Jones!',12,'rajneesh');
+INSERT INTO comment VALUES(13,'Test : checking comment',12,'rajneesh');
+INSERT INTO comment VALUES(14,'Test : checking comment',12,'rajneesh');
+INSERT INTO comment VALUES(15,'Test : checking comment',12,'rajneesh');
+INSERT INTO comment VALUES(16,'Hi',12,'rajneesh');
+INSERT INTO comment VALUES(17,'rajneesh Singhatiya!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!',12,'rajneesh');
+INSERT INTO comment VALUES(18,'fasdfasdf',12,'rajneesh');
+INSERT INTO comment VALUES(19,'fasdfasdf',12,'rajneesh');
+INSERT INTO comment VALUES(20,'Hello',57,'rajat');
+INSERT INTO comment VALUES(21,'Hi there',58,'rajat');
+INSERT INTO comment VALUES(22,'Hi there',57,'rajat');
+INSERT INTO comment VALUES(23,'faskjdgsagdk',58,'rajneesh');
+INSERT INTO comment VALUES(24,'comment test 3',60,'rajneesh');
+INSERT INTO comment VALUES(25,'This',57,'rajneesh');
+INSERT INTO comment VALUES(26,'Hi',63,'rajneesh');
+INSERT INTO comment VALUES(27,'fadg',57,'anonymous');
+INSERT INTO comment VALUES(28,'HEllo',57,'anonymous');
+INSERT INTO comment VALUES(29,'From rajneesh',57,'rajneesh');
+DELETE FROM sqlite_sequence;
+INSERT INTO sqlite_sequence VALUES('blog_detail',66);
+INSERT INTO sqlite_sequence VALUES('comment',29);
+COMMIT;
+blog_id     user_name   title       content          date        published 
+----------  ----------  ----------  ---------------  ----------  ----------
+57          rajat       Hi          fas;gasdg;jdfgk  2018-11-11  1         
+63          rajneesh    Computer    <p>A <b>compute  2018-11-11  1         
+64          rajneesh    more test   <p>According to  2018-11-11  1         
+65          rajneesh    more 1      <p>According to  2018-11-11  1         
+blog_id     user_name   title       content          date        published 
+----------  ----------  ----------  ---------------  ----------  ----------
+57          rajat       Hi          fas;gasdg;jdfgk  2018-11-11  1         
+63          rajneesh    Computer    <p>A <b>compute  2018-11-11  1         
+64          rajneesh    more test   <p>According to  2018-11-11  1         
+65          rajneesh    more 1      <p>According to  2018-11-11  1         
+blog_id     user_name   title       content          date        published 
+----------  ----------  ----------  ---------------  ----------  ----------
+57          rajat       Hi          fas;gasdg;jdfgk  2018-11-11  1         
+63          rajneesh    Computer    <p>A <b>compute  2018-11-11  1         
+64          rajneesh    more test   <p>According to  2018-11-11  1         
+65          rajneesh    more 1      <p>According to  2018-11-11  1         

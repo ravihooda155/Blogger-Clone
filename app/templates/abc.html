@@ -1,0 +1,11 @@
+{% extends "header.html" %}
+{% block content %}
+{% for post in user %}
+<div id='blog{{post.blog_id}}' style="display:block; width:80%;max-height:300px; overflow: hidden;">{{ post.user_name }} {{ post.title }}  {{ post.content | safe }}says: </div>
+<button onClick="{if(this.textContent=='more'){document.getElementById('blog{{post.blog_id}}').style.maxHeight='none';this.textContent='less';}else{document.getElementById('blog{{post.blog_id}}').style.maxHeight='300px';this.textContent='more';}}" >more</button>
+<button id='comment' onclick="{var div =document.getElementById('comment{{post.blog_id}}');if(div.style.display=='none'){div.style.display='block';get_comment('{{post.blog_id}}')}else{div.style.display='none'}}">comment</button>
+<div style="display:none;" id='comment{{post.blog_id}}'>
+
+</div>
+{% endfor %}
+{% endblock %} 

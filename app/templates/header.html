@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Welcome to microblog</title>
+  </head>
+  <body>
+    {% block content %}{% endblock %}
+    <script>
+        function get_comment(blog_id)
+        {
+            var formData = new FormData();
+            formData.append('blog_id', blog_id);
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("comment"+blog_id).innerHTML = this.responseText;
+                }
+            };
+            xhr.open('POST', 'http://127.0.0.1:5000/comment', true);
+            xhr.send(formData);
+            //   document.getElementById('text_name').value=y;
+            return y; 
+        }
+    </script>
+  </body>
+</html>

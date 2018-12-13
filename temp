@@ -1,0 +1,1000 @@
+  823  cd threads/
+  824  pintos -- run alarm-multiple
+  825  cd ..
+  826  cd threads/
+  827  make clean
+  828  make
+  829  cd ..
+  830  cd tests/
+  831  cd threads/
+  832  pintos -- run alarm-multiple
+  833  cd ..
+  834  cd threads/build/
+  835  make check
+  836  git init
+  837  git add *
+  838  git status
+  839  git commit
+  840  cd src/
+  841  ls
+  842  cd threads/build/
+  843  make check
+  844  clear
+  845  cd ..
+  846  make
+  847  make clean
+  848  make
+  849  cd build/
+  850  make case
+  851  make clean
+  852  cd ..
+  853  make clean
+  854  make
+  855  cd build/
+  856  make check 
+  857  clear
+  858  exit
+  859  cd Pintos-master
+  860  cd src/threads/
+  861  make clean
+  862  make
+  863  cd build/
+  864  make check
+  865  clear
+  866  make check
+  867  clear
+  868  exit
+  869  make clean
+  870  make
+  871  cd build/
+  872  make clean
+  873  make
+  874  pintos -- run priority-fifo
+  875  clear
+  876  make
+  877  pintos -- run priority-fifo
+  878  pintos -- run priority-change
+  879  make
+  880  pintos -- run priority-change
+  881  make check
+  882  python run.py 
+  883  pip install flask
+  884  python run.py 
+  885  pip install flask
+  886  python run.py 
+  887  pip install flask
+  888  exit
+  889  apt-install python-pip
+  890  sudo apt-get install python-pip
+  891  elar
+  892  clear
+  893  sudo apt-get install python-pip
+  894  clear
+  895  sudo apt-get install python-pip
+  896  make
+  897  cd ..
+  898  make clean
+  899  make
+  900  cd build/
+  901  make check
+  902  cd ..
+  903  cd build/
+  904  make
+  905  make check
+  906  make
+  907  pintos -- run priority-change
+  908  clear
+  909  pintos -- run priority-change
+  910  make
+  911  pintos -- run priority-change
+  912  make
+  913  pintos -- run priority-change
+  914  pip install flask
+  915  python run.py 
+  916  exit
+  917  make
+  918  make check
+  919  make
+  920  make check
+  921  pintos -- run priority-change
+  922  make
+  923  pintos -- run priority-change
+  924  make
+  925  pintos -- run priority-change
+  926  make check
+  927  pintos -- run priority-change
+  928  make check
+  929  clear
+  930  make check
+  931  make
+  932  clear
+  933  pintos -- run priority-sema
+  934  clear
+  935  pintos -- run priority-sema
+  936  make
+  937  pintos -- run priority-sema
+  938  make
+  939  pintos -- run priority-sema
+  940  make
+  941  pintos -- run priority-sema
+  942  clear
+  943  sudo apt-get install updates
+  944  sudo apt-get upgrade
+  945  sudo apt-get update
+  946  clear
+  947  reboot
+  948  touch README.md
+  949  make
+  950  pintos -- run priority-condvar
+  951  make
+  952  make check
+  953  make
+  954  make check
+  955  pintos -- run priority-condvar
+  956  make
+  957  pintos -- run priority-condvar
+  958  make
+  959  clear
+  960  make
+  961  clear
+  962  make
+  963  clear
+  964  make
+  965  clear
+  966  make
+  967  clear
+  968  make
+  969  clear
+  970  make
+  971  clear
+  972  make
+  973  clear
+  974  make
+  975  clear
+  976  make
+  977  clear
+  978  make
+  979  clear
+  980  make
+  981  clear
+  982  make
+  983  clear
+  984  make
+  985  clear
+  986  make
+  987  clear
+  988  make
+  989  clear
+  990  make
+  991  clear
+  992  make
+  993  pintos -- run priority-condvar
+  994  make
+  995  pintos -- run priority-condvar
+  996  clear
+  997  pintos -- run priority-condvar
+  998  make
+  999  pintos -- run priority-condvar
+ 1000  make check
+ 1001  git add *
+ 1002  git status
+ 1003  git commit
+ 1004  git log 
+ 1005  git commit
+ 1006  clear
+ 1007  git log 
+ 1008  clear
+ 1009  exit
+ 1010  git init
+ 1011  git add *
+ 1012  git status
+ 1013  git commit
+ 1014  git remote add origin https://github.com/rajneesh-2018202018/APS-Project.git
+ 1015  git push -u origin master
+ 1016  clear
+ 1017  exit
+ 1018  make
+ 1019  cd ..
+ 1020  ls
+ 1021  cd c++
+ 1022  ls
+ 1023  g++ nqueens.cpp 
+ 1024  ./a.out 
+ 1025  clear
+ 1026  exit
+ 1027  make check
+ 1028  make
+ 1029  cd build/
+ 1030  make
+ 1031  make check
+ 1032  exit
+ 1033  conda install nbconvert
+ 1034  exit
+ 1035  jupyter-notebook
+ 1036  exit
+ 1037  pip install nbconvert
+ 1038  exit
+ 1039  jupyter-notebook
+ 1040  clear
+ 1041  exit
+ 1042  tar -czvf 2018202018 2018202018.tar.gz
+ 1043  tar -czvf 2018202018.tar.gz 2018202018
+ 1044  clear
+ 1045  tar -czvf 2018202018.tar.gz 2018202018
+ 1046  clear
+ 1047  tar -czvf 2018202018.tar.gz 2018202018
+ 1048  clear
+ 1049  exit
+ 1050  tar -czvf 2018202018.tar.gz 2018202018
+ 1051  exit
+ 1052  sqlite
+ 1053  sqlite3
+ 1054  clear
+ 1055  sqlite3
+ 1056  sqlite3 database.db
+ 1057  sqlite3
+ 1058  sqlite3 test.db .dump > test.sql
+ 1059  ls
+ 1060  sqlite3 test.db
+ 1061  more test.sql
+ 1062  sqlite3 test.db < test.sql
+ 1063  clear
+ 1064  sqlite3 test.db < test.sql
+ 1065  sqlite3 test.db
+ 1066  exit
+ 1067  python -m pip install -U "pylint<2.0.0" --user
+ 1068  md Question{1,2}
+ 1069  mkdir Question{1,2}
+ 1070  cd Question2
+ 1071  python
+ 1072  clear
+ 1073  python
+ 1074  clear
+ 1075  python py
+ 1076  python pyshell.py
+ 1077  ls
+ 1078  cd IIIT_sem_1/
+ 1079  ls
+ 1080  cd Scripting/
+ 1081  cd Assignment-3
+ 1082  cd Question2
+ 1083  python pyshell.py 
+ 1084  exit
+ 1085  python pyshell.py 
+ 1086  exit
+ 1087  ls ..
+ 1088  ls
+ 1089  clear
+ 1090  exit
+ 1091  ls
+ 1092  mkdir fddsdfaskjjdfhsakdfsalkdfdasdf
+ 1093  ls
+ 1094  clear
+ 1095  rm fddsdfaskjjdfhsakdfsalkdfdasdf/
+ 1096  rm -r fddsdfaskjjdfhsakdfsalkdfdasdf/
+ 1097  ls
+ 1098  clear
+ 1099  exit
+ 1100  pwd
+ 1101  cd IIIT_sem_1/
+ 1102  pwd
+ 1103  clear
+ 1104  pwd
+ 1105  exit
+ 1106  had
+ 1107  head
+ 1108  cd IIIT_sem_1/
+ 1109  head *
+ 1110  cd APS/
+ 1111  ls
+ 1112  cd ..
+ 1113  cd Scripting/
+ 1114  ls
+ 1115  head *
+ 1116  clera
+ 1117  clear
+ 1118  python pyshell.py
+ 1119  cd Question2
+ 1120  python pyshell.py
+ 1121  ls
+ 1122  python pyshell.py
+ 1123  clear
+ 1124  python pyshell.py
+ 1125  clear
+ 1126  python pyshell.py
+ 1127  clear
+ 1128  python pyshell.py
+ 1129  clear
+ 1130  chusr
+ 1131  clear
+ 1132  chusr
+ 1133  python pyshell.py
+ 1134  clear
+ 1135  python pyshell.py
+ 1136  clear
+ 1137  python pyshell.py
+ 1138  cat temp << hello frined
+ 1139  dhsfkasd 
+ 1140  dfka;hdf 
+ 1141  cat temp
+ 1142  cat >>temp
+ 1143  cat temp
+ 1144  ls cat
+ 1145  ls temp 
+ 1146  ls *
+ 1147  ls -ld
+ 1148  touch temp 
+ 1149  ls -ld
+ 1150  python pyshell.py
+ 1151  ls -ld
+ 1152  python pyshell.py
+ 1153  ls -ld
+ 1154  clear
+ 1155  ls -ld
+ 1156  clear
+ 1157  python pyshell.py
+ 1158  ls -ld temp 
+ 1159  ls -ld *
+ 1160  python pyshell.py
+ 1161  ls -ld *
+ 1162  clear
+ 1163  python pyshell.py
+ 1164  clear
+ 1165  python pyshell.py
+ 1166  clear
+ 1167  python pyshell.py temp.py
+ 1168  clear
+ 1169  python pyshell.py
+ 1170  clear
+ 1171  python pyshell.py
+ 1172  clear
+ 1173  exit
+ 1174  python pyshell.py
+ 1175  cd Question2
+ 1176  python pyshell.py
+ 1177  head pyshell.py 
+ 1178  cat >> temp
+ 1179  clear
+ 1180  diff pyshell.py pyshell1.py 
+ 1181  exit
+ 1182  diff pyshell.py pyshell1.py 
+ 1183  head pyshell.py 
+ 1184  cd Question2
+ 1185  python pyshell.py 
+ 1186  tr [:lower:] [:upper:] pyshell.py 
+ 1187  tr [:upper:] pyshell.py 
+ 1188  tr "[:upper:]" pyshell.py 
+ 1189  clear
+ 1190  tr [:upper:] [:lower:] < pyshell.py 
+ 1191  clear
+ 1192  tr [:lower:] [:upper:] < pyshell.py 
+ 1193  clear
+ 1194  tr "grep" "1234" < pyshell.py 
+ 1195  clear
+ 1196  python pyshell.py 
+ 1197  clear
+ 1198  python pyshell.py 
+ 1199  tr "abcd" "12" "abcd abcd"
+ 1200  tr "abcd" "12" < "abcd abcd"
+ 1201  tr "abcd" "12" "abcd abcd"
+ 1202  tr --help
+ 1203  python pyshell.py 
+ 1204  clear
+ 1205  copy pyshell.py pyshell(src).py 
+ 1206  copy pyshell.py pyshell_src.py 
+ 1207  cp pyshell.py pyshell_src.py 
+ 1208  ls
+ 1209  clear
+ 1210  ls
+ 1211  clear
+ 1212  ls
+ 1213  exit
+ 1214  cd Question2
+ 1215  ls
+ 1216  python pyshell.py
+ 1217  clear
+ 1218  python pyshell.py
+ 1219  diff pyshell.py pyshell_src.py 
+ 1220  clear
+ 1221  python diff.py 
+ 1222  clear
+ 1223  python diff.py 
+ 1224  diff pyshell.py pyshell_src.py 
+ 1225  clear
+ 1226  cat >> temp
+ 1227  cat >>temp2
+ 1228  diff temp temp2
+ 1229  clear
+ 1230  python diff.py 
+ 1231  python diff.py  temp temp2
+ 1232  clear
+ 1233  pythom
+ 1234  python
+ 1235  clear
+ 1236  python
+ 1237  clear
+ 1238  exit
+ 1239  mkdir static
+ 1240  mkdir templates
+ 1241  exit
+ 1242  touch style.css
+ 1243  touch exit
+ 1244  exit
+ 1245  python pyshell.py
+ 1246  cd Question2
+ 1247  python pyshell.py
+ 1248  clear
+ 1249  python pyshell.py
+ 1250  clear
+ 1251  cd ../Question1
+ 1252  python online_shopping.py 
+ 1253  clear
+ 1254  sqlite3 test.db
+ 1255  python online_shopping.py 
+ 1256  clear
+ 1257  python online_shopping.py 
+ 1258  clear
+ 1259  python online_shopping.py 
+ 1260  clear
+ 1261  python online_shopping.py 
+ 1262  clear
+ 1263  python online_shopping.py 
+ 1264  sqlite3 test.db 
+ 1265  clear
+ 1266  sqlite3 test.db 
+ 1267  python online_shopping.py 
+ 1268  clear
+ 1269  python online_shopping.py 
+ 1270  clear
+ 1271  python online_shopping.py 
+ 1272  clear
+ 1273  rm rajneesh.db 
+ 1274  python online_shopping.py 
+ 1275  clear
+ 1276  rm rajneesh.db 
+ 1277  python online_shopping.py 
+ 1278  clear
+ 1279  exit
+ 1280  sqlite3 database.db 
+ 1281  more users.sql 
+ 1282  exit
+ 1283  pip install flask-bootstrap
+ 1284  clear
+ 1285  mkdir static
+ 1286  mkdir templates
+ 1287  clear
+ 1288  exit
+ 1289  touch run.py
+ 1290  exit
+ 1291  python main.py 
+ 1292  python models.py
+ 1293  clear
+ 1294  python main.py 
+ 1295  clear
+ 1296  python run.py 
+ 1297  python main.py 
+ 1298  python py
+ 1299  python main.py 
+ 1300  clear
+ 1301  pip install passlib
+ 1302  sqlite3 database.db 
+ 1303  exit
+ 1304  python main.py 
+ 1305  exit
+ 1306  python run.py 
+ 1307  clear
+ 1308  python run.py 
+ 1309  python run.py 
+ 1310  clear
+ 1311  python run.py 
+ 1312  clear
+ 1313  python run.py 
+ 1314  clear
+ 1315  python run.py 
+ 1316  clear
+ 1317  python run.py 
+ 1318  clear
+ 1319  python run.py 
+ 1320  cd app/
+ 1321  exit
+ 1322  python myserver.py 
+ 1323  pip install flask_cors
+ 1324  python myserver.py 
+ 1325  exit
+ 1326  python hello.py 
+ 1327  clear
+ 1328  bash hello.sh 
+ 1329  clear
+ 1330  touch login.html
+ 1331  exit
+ 1332  python run.py 
+ 1333  cd app/
+ 1334  python __init__.py
+ 1335  cd ..
+ 1336  python run.py 
+ 1337  exit
+ 1338  python run.py 
+ 1339  exit
+ 1340  sqlite3 database.db 
+ 1341  exit
+ 1342  python main.py 
+ 1343  clear
+ 1344  exit
+ 1345  python main.py 
+ 1346  python run.py 
+ 1347  python run.py 
+ 1348  clear
+ 1349  python run.py 
+ 1350  clear
+ 1351  exit
+ 1352  pip install Flask-RESTful
+ 1353  conda
+ 1354  conda update
+ 1355  clear
+ 1356  exit
+ 1357  python run.py 
+ 1358  clear
+ 1359  python run.py 
+ 1360  clear
+ 1361  python run.py 
+ 1362  sqlite3 database.db 
+ 1363  exit
+ 1364  python run.py 
+ 1365  subl
+ 1366  clear
+ 1367  python run.py 
+ 1368  python main.py 
+ 1369  exit
+ 1370  python main.py 
+ 1371  python run.py 
+ 1372  python online_shopping.py 
+ 1373  clear
+ 1374  python online_shopping.py 
+ 1375  clear
+ 1376  python online_shopping.py 
+ 1377  clear
+ 1378  python online_shopping.py 
+ 1379  clear
+ 1380  python online_shopping.py 
+ 1381  clear
+ 1382  python online_shopping.py 
+ 1383  clear
+ 1384  python online_shopping.py 
+ 1385  clear
+ 1386  python online_shopping.py 
+ 1387  clear
+ 1388  python online_shopping.py 
+ 1389  clear
+ 1390  python online_shopping.py 
+ 1391  clear
+ 1392  python online_shopping.py 
+ 1393  clear
+ 1394  python online_shopping.py 
+ 1395  clear
+ 1396  python online_shopping.py 
+ 1397  clear
+ 1398  python online_shopping.py 
+ 1399  clear
+ 1400  python online_shopping.py 
+ 1401  clear
+ 1402  python online_shopping.py 
+ 1403  clear
+ 1404  python online_shopping.py 
+ 1405  clear
+ 1406  python online_shopping.py 
+ 1407  clear
+ 1408  python online_shopping.py 
+ 1409  clear
+ 1410  python online_shopping.py 
+ 1411  clear
+ 1412  python online_shopping.py 
+ 1413  clear
+ 1414  python online_shopping.py 
+ 1415  clear
+ 1416  python online_shopping.py 
+ 1417  clear
+ 1418  exit
+ 1419  python online_shopping.py 
+ 1420  cd Question1
+ 1421  python online_shopping.py 
+ 1422  cleaer
+ 1423  clear
+ 1424  cd Question1
+ 1425  python online_shopping.py 
+ 1426  clear
+ 1427  python online_shopping.py 
+ 1428  clear
+ 1429  python online_shopping.py 
+ 1430  clear
+ 1431  python online_shopping.py 
+ 1432  clear
+ 1433  python online_shopping.py 
+ 1434  clear
+ 1435  python online_shopping.py 
+ 1436  clear
+ 1437  python online_shopping.py 
+ 1438  clear
+ 1439  python online_shopping.py 
+ 1440  clear
+ 1441  python online_shopping.py 
+ 1442  clear
+ 1443  python online_shopping.py 
+ 1444  clear
+ 1445  python online_shopping.py 
+ 1446  clear
+ 1447  python online_shopping.py 
+ 1448  clear
+ 1449  python online_shopping.py 
+ 1450  clear
+ 1451  python online_shopping.py 
+ 1452  clear
+ 1453  python online_shopping.py 
+ 1454  clear
+ 1455  python online_shopping.py 
+ 1456  clear
+ 1457  python online_shopping.py 
+ 1458  clear
+ 1459  exit
+ 1460  python online_shopping.py 
+ 1461  clear
+ 1462  exit
+ 1463  subl pyshell.py 
+ 1464  python pyshell.py 
+ 1465  exit
+ 1466  python
+ 1467  exit
+ 1468  python diff.py 
+ 1469  python diff.py  pyshell.py pyshell_src.py 
+ 1470  clear
+ 1471  exit
+ 1472  git status
+ 1473  git logs
+ 1474  git log
+ 1475  clear
+ 1476  exit
+ 1477  emacs
+ 1478  clear
+ 1479  exit
+ 1480  python -m
+ 1481  python -h
+ 1482  subl
+ 1483  ipython
+ 1484  exit
+ 1485  python shopping.py 
+ 1486  clear
+ 1487  python shopping.py 
+ 1488  clear
+ 1489  python shopping.py 
+ 1490  clear
+ 1491  exit
+ 1492  python shopping.py 
+ 1493  clear
+ 1494  python shopping.py 
+ 1495  clear
+ 1496  python shopping.py 
+ 1497  clear
+ 1498  python shopping.py 
+ 1499  clear
+ 1500  python shopping.py 
+ 1501  clear
+ 1502  python shopping.py 
+ 1503  clear
+ 1504  python shopping.py 
+ 1505  clear
+ 1506  python shopping.py 
+ 1507  clear
+ 1508  python shopping.py 
+ 1509  clear
+ 1510  python shopping.py 
+ 1511  clear
+ 1512  python shopping.py 
+ 1513  clear
+ 1514  python shopping.py 
+ 1515  clear
+ 1516  python shopping.py 
+ 1517  clear
+ 1518  python shopping.py 
+ 1519  clea
+ 1520  clear
+ 1521  python shopping.py 
+ 1522  clear
+ 1523  python shopping.py 
+ 1524  clear
+ 1525  python shopping.py 
+ 1526  clear
+ 1527  python shopping.py 
+ 1528  clear
+ 1529  python shopping.py 
+ 1530  vlear
+ 1531  cleaer
+ 1532  clear
+ 1533  python shopping.py 
+ 1534  clear
+ 1535  python shopping.py 
+ 1536  clear
+ 1537  python shopping.py 
+ 1538  clear
+ 1539  python shopping.py 
+ 1540  clear
+ 1541  python shopping.py 
+ 1542  clear
+ 1543  python shopping.py 
+ 1544  clear
+ 1545  python shopping.py 
+ 1546  clear
+ 1547  python shopping.py 
+ 1548  clear
+ 1549  python shopping.py 
+ 1550  clear
+ 1551  python shopping.py 
+ 1552  clear
+ 1553  python shopping.py 
+ 1554  clear
+ 1555  python shopping.py 
+ 1556  clear
+ 1557  python shopping.py 
+ 1558  clear
+ 1559  python shopping.py 
+ 1560  clear
+ 1561  python shopping.py 
+ 1562  clear
+ 1563  python shopping.py 
+ 1564  cler
+ 1565  clear
+ 1566  python shopping.py 
+ 1567  clear
+ 1568  python shopping.py 
+ 1569  clear
+ 1570  python shopping.py 
+ 1571  clear
+ 1572  python shopping.py 
+ 1573  clear
+ 1574  python shopping.py 
+ 1575  clear
+ 1576  python shopping.py 
+ 1577  clear
+ 1578  python shopping.py 
+ 1579  clear
+ 1580  python shopping.py 
+ 1581  clear
+ 1582  python shopping.py 
+ 1583  clear
+ 1584  python shopping.py 
+ 1585  clear
+ 1586  python shopping.py 
+ 1587  clear
+ 1588  python shopping.py 
+ 1589  clear
+ 1590  python shopping.py 
+ 1591  clear
+ 1592  python shopping.py 
+ 1593  clear
+ 1594  python shopping.py 
+ 1595  clear
+ 1596  python shopping.py 
+ 1597  clear
+ 1598  python shopping.py 
+ 1599  clear
+ 1600  python shopping.py 
+ 1601  clear
+ 1602  python shopping.py 
+ 1603  claer
+ 1604  clear
+ 1605  python shopping.py 
+ 1606  clear
+ 1607  python shopping.py 
+ 1608  clear
+ 1609  python shopping.py 
+ 1610  clear
+ 1611  python shopping.py 
+ 1612  clear
+ 1613  python shopping.py 
+ 1614  clear
+ 1615  python shopping.py 
+ 1616  clear
+ 1617  python shopping.py 
+ 1618  clear
+ 1619  python shopping.py 
+ 1620  cler
+ 1621  clear
+ 1622  cler
+ 1623  python shopping.py 
+ 1624  clear
+ 1625  python shopping.py 
+ 1626  clear
+ 1627  python shopping.py 
+ 1628  clear
+ 1629  python shopping.py 
+ 1630  clear
+ 1631  exit
+ 1632  python pyshell.py 
+ 1633  clear
+ 1634  python pyshell.py 
+ 1635  clear
+ 1636  python pyshell.py 
+ 1637  clear
+ 1638  python pyshell.py 
+ 1639  exit
+ 1640  python online_shopping.py 
+ 1641  clear
+ 1642  python online_shopping.py 
+ 1643  clear
+ 1644  python online_shopping.py 
+ 1645  clear
+ 1646  python online_shopping.py 
+ 1647  clear
+ 1648  python online_shopping.py 
+ 1649  clear
+ 1650  python online_shopping.py 
+ 1651  touch products.db
+ 1652  python online_shopping.py 
+ 1653  clear
+ 1654  exit
+ 1655  python online_shopping.py 
+ 1656  python run.py 
+ 1657  clear
+ 1658  sudo apt-get install texlive-full
+ 1659  clear
+ 1660  texeditor
+ 1661  texmaker
+ 1662  sudo apt install texmaker
+ 1663  texmaker
+ 1664  exit
+ 1665  python main.py 
+ 1666  python run.py 
+ 1667  clear
+ 1668  python run.py 
+ 1669  git init
+ 1670  git add *
+ 1671  git commit
+ 1672  git log
+ 1673  clear
+ 1674  git remote add origin https://github.com/rajneesh-2018202018/scripting-project.git
+ 1675  git push -u origin master
+ 1676  python run.py 
+ 1677  sqlite3 database.db 
+ 1678  clear
+ 1679  exit
+ 1680  sqlite3 database.db 
+ 1681  more temp.sql 
+ 1682  clear
+ 1683  exit
+ 1684  sqlite3 database.db 
+ 1685  exit
+ 1686  sqlite3 database.db 
+ 1687  more db.sql 
+ 1688  clear
+ 1689  sqlite3 database.db 
+ 1690  exit
+ 1691  python run.py 
+ 1692  sqlite3 database.db 
+ 1693  exit
+ 1694  python run.py 
+ 1695  exit
+ 1696  python shopping.py 
+ 1697  clear
+ 1698  python shopping.py 
+ 1699  clear
+ 1700  python shopping.py 
+ 1701  clear
+ 1702  python shopping.py 
+ 1703  clear
+ 1704  python shopping.py 
+ 1705  clear
+ 1706  python shopping.py 
+ 1707  clear
+ 1708  python shopping.py 
+ 1709  clear
+ 1710  python shopping.py 
+ 1711  clear
+ 1712  python shopping.py 
+ 1713  clear
+ 1714  python shopping.py 
+ 1715  clear
+ 1716  exit
+ 1717  python shopping.py 
+ 1718  clear
+ 1719  python shopping.py 
+ 1720  clear
+ 1721  python shopping.py 
+ 1722  ckear
+ 1723  clear
+ 1724  ckear
+ 1725  python shopping.py 
+ 1726  clear
+ 1727  exit
+ 1728  python main.py 
+ 1729  rm -r temp*
+ 1730  exit
+ 1731  exit
+ 1732  text,html
+ 1733  touch text.html
+ 1734  gedit text.html 
+ 1735  python run.py 
+ 1736  clear
+ 1737  python run.py 
+ 1738  clear
+ 1739  python run.py 
+ 1740  clear
+ 1741  python run.py 
+ 1742  sqlite3 database.db 
+ 1743  clear
+ 1744  sqlite3 database.db 
+ 1745  exit
+ 1746  sqlite3 database.db 
+ 1747  python run.py 
+ 1748  sqlite3 database.db 
+ 1749  exit
+ 1750  python shopping.py 
+ 1751  clear
+ 1752  python shopping.py 
+ 1753  pip install matplotlib
+ 1754  clear
+ 1755  ipython
+ 1756  pip install plotly
+ 1757  python shopping.py 
+ 1758  clear
+ 1759  python shopping.py 
+ 1760  1
+ 1761  2
+ 1762  23
+ 1763  4
+ 1764  21
+ 1765  12
+ 1766  1323
+ 1767  clear
+ 1768  1323
+ 1769  python shopping.py 
+ 1770  pip install python-tk
+ 1771  sudo apt-get install python-tk
+ 1772  python shopping.py 
+ 1773  clear
+ 1774  python shopping.py 
+ 1775  python final.py 
+ 1776  python run.py 
+ 1777  python
+ 1778  python final.py 
+ 1779  exit
+ 1780  sqlite3 database.db 
+ 1781  exit
+ 1782  sqlite3 database.db 
+ 1783  exit
+ 1784  sqlite3 database.db 
+ 1785  exit
+ 1786  python run
+ 1787  python run
+ 1788  python run.py 
+ 1789  mkdir build
+ 1790  cd build/
+ 1791  meson ..
+ 1792  sudo apt install meson
+ 1793  meson ..
+ 1794  exit
+ 1795  meson ..
+ 1796  exit
+ 1797  ninja
+ 1798  sudo python3 -m pytest test/
+ 1799  sudo ninja install
+ 1800  ninja
+ 1801  exit
+ 1802  mkdir build; cd build
+ 1803  meson ..
+ 1804  ninja
+ 1805  sudo python3 -m pytest test/
+ 1806  pytest
+ 1807  python3 pytest
+ 1808  sudo ninja install
+ 1809  clear
+ 1810  python run.py 
+ 1811  sqlite3 database.db 
+ 1812  clear
+ 1813  exit
+ 1814  git status
+ 1815  git add*
+ 1816  git add *
+ 1817  git commit
+ 1818  git push
+ 1819  sqlite3 database.db 
+ 1820  exit
+ 1821  sqlite3 database.db 
+ 1822  history > temp

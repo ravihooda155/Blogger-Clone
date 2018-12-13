@@ -1,0 +1,69 @@
+.row.content {height: fit-content}
+    
+.sidenav {
+  background-color: #f1f1f1;
+  height: fit-content;
+}
+    
+footer {
+  background-color: #555;
+  color: white;
+  padding: 15px;
+}
+    
+@media screen and (max-width: 767px) {
+  .sidenav {
+    height: auto;
+    padding: 15px;
+  }
+  .row.content {height: auto;} 
+}
+
+body{
+  background-image: "./background.png"; 
+  }
+
+#initial{
+  border-radius: 25px;
+  -moz-animation: fadein 2s;
+  animation: fadein 2s;
+}
+
+@-moz-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.btn {
+  border: none;
+  color: white;
+  border-radius:8px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.success {background-color: #4CAF50;} /* Green */
+.success:hover {background-color: #46a049;}
+
+.info {background-color: #2196F3;border-radius: 8px;} /* Blue */
+.info:hover {background: #0b7dda;border-radius: 8px;}
+
+.warning {background-color: #ff9800;} /* Orange */
+.warning:hover {background: #e68a00;}
+
+.danger {background-color: #f44336;} /* Red */ 
+.danger:hover {background: #da190b;}
+
+.default {background-color: #e7e7e7; color: black;} /* Gray */ 
+.default:hover {background: #ddd;}
+
+.comment {background-color: #2196F3;} /* Blue */
+.comment:hover {background: #0b7dda;}
+
+
+
+.submit {background-color: #4CAF50;width: 400px;font-size: 20px;} /* Green */
+.submit:hover {background-color: #46a049;width: 400px;font-size: 20px;}
+
+.subdraft {background-color: #ff9800; width:400px;font-size: 20px;} /* Orange */
+.subdraft:hover {background: #e68a00;width: 400px;font-size: 20px;}
